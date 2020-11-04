@@ -5,22 +5,19 @@
 </template>
 
 <script>
-
 export default {
   name: 'App',
-  components: {
-    
+  created() {
+    this.SetWindowWidth()
+    window.addEventListener('resize', this.SetWindowWidth)
+  },
+  destroyed() {
+    window.removeEventListener('resize', this.SetWindowWidth)
+  },
+  methods: {
+    SetWindowWidth() {
+      this.$store.commit('General/SetWindowWidth', window.innerWidth)
+    }
   }
 }
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>

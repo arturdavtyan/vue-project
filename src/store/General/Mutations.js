@@ -5,7 +5,7 @@ export default {
     const width = parseInt(payload)
 
     if (width) {
-      state.WindowWith = width
+      state.WindowWidth = width
     }
   }
 }
