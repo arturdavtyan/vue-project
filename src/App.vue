@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    
+    <h1 style="width: 200px; background: lightgreen; word-break: break-all">Header: Hello World</h1>
   </div>
 </template>
 

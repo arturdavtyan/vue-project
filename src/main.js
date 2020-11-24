@@ -4,6 +4,9 @@ import App from './App.vue'
 // Globally Registered Components
 import './GlobalComponents.js'
 
+// Styles: SCSS
+import './assets/scss/main.scss'
+
 // Vue Router
 import router from './router'
 
